@@ -172,6 +172,29 @@ body {
   display: block;
 }
 
+/* Navigation square hover effect */
+.nav-item:hover .nav-square {
+  background-color: #2A3284 !important;
+}
+
+/* Neo button hover effects - keep glitch but add visual feedback */
+.neo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    0 0 0 2px color-mix(in srgb, var(--primary) 60%, transparent),
+    0 0 20px color-mix(in srgb, var(--primary) 40%, transparent);
+  color: white !important;
+}
+
+.neo-btn:hover::after {
+  box-shadow: 0 0 20px color-mix(in srgb, var(--primary) 40%, transparent);
+}
+
+.neo-btn:hover::before {
+  box-shadow: 0 0 15px color-mix(in srgb, var(--shadow-primary) 30%, transparent);
+}
+
 .neo-btn__glitch::before {
   content: '';
   position: absolute;

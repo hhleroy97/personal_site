@@ -55,28 +55,21 @@ export default function Navigation() {
                     <Link
                       href={item.href}
                       className={cn(
-                        "relative group font-mono uppercase tracking-wider text-sm font-medium transition-all duration-300",
-                        pathname === item.href
-                          ? ""
-                          : ""
-                      )}
-                    >
-                      <div className={cn(
-                        "px-4 py-2 border transition-all duration-300 flex items-center space-x-2",
+                        "relative nav-item font-mono uppercase tracking-wider text-sm font-medium transition-all duration-300 px-4 py-2 border flex flex-row items-center space-x-3",
                         pathname === item.href
                           ? "bg-[#FFE135] text-black border-[#FFE135]"
                           : "text-[#8B94C7] border-[#2A3284] hover:bg-[#2A3284] hover:text-[#00BFFF] hover:border-[#00BFFF]"
-                      )}>
-                        <div className={cn(
-                          "w-2 h-2 transition-colors duration-300",
-                          pathname === item.href
-                            ? "bg-black"
-                            : "bg-[#2A3284] group-hover:bg-[#00BFFF]"
-                        )}></div>
-                        <span className="font-mono text-sm uppercase tracking-wider">
-                          {item.name}
-                        </span>
-                      </div>
+                      )}
+                    >
+                      <div className={cn(
+                        "w-4 h-4 flex-shrink-0 transition-colors duration-300 nav-square",
+                        pathname === item.href
+                          ? "bg-black"
+                          : "bg-[#00BFFF]"
+                      )}></div>
+                      <span className="font-mono text-sm uppercase tracking-wider">
+                        {item.name}
+                      </span>
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
